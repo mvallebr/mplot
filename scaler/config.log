@@ -1,0 +1,185 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:578: checking for a BSD compatible install
+configure:631: checking whether build environment is sane
+configure:688: checking whether make sets ${MAKE}
+configure:734: checking for working aclocal
+configure:747: checking for working autoconf
+configure:760: checking for working automake
+configure:773: checking for working autoheader
+configure:786: checking for working makeinfo
+configure:874: checking for gnome-config
+configure:911: checking if /usr/bin/gnome-config works
+configure:919: checking for orbit-config
+configure:955: checking for orbit-idl
+configure:989: checking for working ORBit environment
+configure:1025: checking for gnorba libraries
+configure:1131: checking for strerror in -lcposix
+configure:1150: colorgcc -o conftest    conftest.c -lcposix   1>&5
+/usr/bin/ld: cannot find -lcposix
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1139 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strerror();
+
+int main() {
+strerror()
+; return 0; }
+configure:1175: checking for gcc
+configure:1288: checking whether the C compiler (colorgcc  ) works
+configure:1304: colorgcc -o conftest    conftest.c  1>&5
+configure:1330: checking whether the C compiler (colorgcc  ) is a cross-compiler
+configure:1335: checking whether we are using GNU C
+configure:1344: colorgcc -E conftest.c
+configure:1363: checking whether colorgcc accepts -g
+configure:1398: checking for colorgcc option to accept ANSI C
+configure:1451: colorgcc  -c -g -O2  conftest.c 1>&5
+configure:1475: checking how to run the C preprocessor
+configure:1496: colorgcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1555: checking for ANSI C header files
+configure:1568: colorgcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1635: colorgcc -o conftest -g -O2   conftest.c  1>&5
+configure:1670: checking what warning flags to pass to the C compiler
+configure:1702: checking what language compliance flags to pass to the C compiler
+configure:1727: checking for pthread_create in -lpthread
+configure:1746: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations    conftest.c -lpthread   1>&5
+configure:1951: checking for gtk-config
+configure:1986: checking for GTK - version >= 1.2.0
+configure:2087: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include   conftest.c -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm  1>&5
+configure:2190: checking for SmcSaveYourselfDone in -lSM
+configure:2209: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm conftest.c -lSM  -lICE  1>&5
+configure:2238: checking for X11/SM/SMlib.h
+configure:2248: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:2286: checking for XpmFreeXpmImage in -lXpm
+configure:2305: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm conftest.c -lXpm   1>&5
+configure:2341: checking host system type
+configure:2364: checking for ranlib
+configure:2392: checking for working const
+configure:2446: colorgcc -c -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c 1>&5
+configure: In function `main':
+configure:2420: warning: unused variable `s'
+configure:2440: warning: unused variable `foo'
+configure:2408: warning: unused variable `zero'
+configure:2402: warning: unused variable `x'
+configure:2419: warning: `t' might be used uninitialized in this function
+configure:2437: warning: `b' might be used uninitialized in this function
+configure:2467: checking for inline
+configure:2481: colorgcc -c -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c 1>&5
+configure: In function `main':
+configure:2477: warning: control reaches end of non-void function
+configure: At top level:
+configure:2477: warning: return-type defaults to `int'
+configure:2477: warning: no previous prototype for `foo'
+configure:2507: checking for off_t
+configure:2540: checking for size_t
+configure:2575: checking for working alloca.h
+configure:2587: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure: In function `main':
+configure:2583: warning: unused variable `p'
+configure:2608: checking for alloca
+configure:2641: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure: In function `main':
+configure:2637: warning: unused variable `p'
+configure:2810: checking for unistd.h
+configure:2820: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:2849: checking for getpagesize
+configure:2877: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:2902: checking for working mmap
+configure:3050: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure: In function `main':
+configure:2991: warning: implicit declaration of function `getpagesize'
+configure:3000: warning: implicit declaration of function `rand'
+configure:3001: warning: implicit declaration of function `umask'
+configure:3005: warning: implicit declaration of function `write'
+configure:3007: warning: implicit declaration of function `close'
+configure:3038: warning: implicit declaration of function `read'
+configure:3044: warning: implicit declaration of function `unlink'
+configure:3074: checking whether we are using the GNU C Library 2.1 or newer
+configure:3115: checking for argz.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for limits.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for locale.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for nl_types.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for malloc.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for stddef.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for stdlib.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for string.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3115: checking for unistd.h
+configure:3115: checking for sys/param.h
+configure:3125: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3156: checking for feof_unlocked
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for fgets_unlocked
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for getcwd
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for getegid
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for geteuid
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for getgid
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for getuid
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for mempcpy
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for munmap
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for putenv
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for setenv
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for setlocale
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for stpcpy
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for strchr
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for strcasecmp
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for strdup
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for strtoul
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for tsearch
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for __argz_count
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for __argz_stringify
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3156: checking for __argz_next
+configure:3184: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3224: checking for iconv
+configure:3242: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3285: checking for iconv declaration
+configure:3310: colorgcc -c -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c 1>&5
+configure:3339: checking for nl_langinfo and CODESET
+configure:3351: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure: In function `main':
+configure:3347: warning: unused variable `cs'
+configure:3374: checking for LC_MESSAGES
+configure:3386: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3407: checking whether NLS is requested
+configure:3429: checking whether included gettext is requested
+configure:3449: checking for libintl.h
+configure:3459: colorgcc -E  -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include conftest.c >/dev/null 2>conftest.out
+configure:3476: checking for GNU gettext in libc
+configure:3490: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c  1>&5
+configure:3555: checking for dcgettext
+configure:3583: colorgcc -o conftest -g -O2 -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations   -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include  conftest.c   1>&5
+configure:3612: checking for msgfmt
+configure:3646: checking for gmsgfmt
+configure:3683: checking for xgettext
+configure:3874: checking for bison

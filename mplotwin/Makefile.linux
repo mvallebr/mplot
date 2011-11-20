@@ -1,0 +1,32 @@
+CC=gcc
+CFLAGS=-s -g  -I/usr/include -I/usr/include/SDL -Wall -O2 -I.
+LDFLAGS_WINDOWS=
+#-L/lib/mingw -L. -lmingw32  -lSDLmain -lSDL -mwindows -lSDL_image 
+OUTPUT_WINDOWS="mtest"
+OBJS=main.o
+
+DLLNAME_WINDOWS="mplot.so"
+DLL_LDFLAGS_WINDOWS= -L /lib/mingw -L. -lmingw32 -lSDLmain -lSDL -mwindows -lSDL_image
+LIBOBJS=mplot.o 
+EXTRAOBJS= IMG.o IMG_pcx.o   IMG_tif.o \
+	IMG_bmp.o   IMG_png.o  IMG_xcf.o \
+	IMG_gif.o   IMG_pnm.o  IMG_xpm.o \
+	IMG_jpg.o   IMG_tga.o  SFont.o
+
+DEFFILE=mplot.def
+ANAME_WINDOWS=libmplot.a
+
+all: lib $(OBJS) 
+	$(CC) $(OBJS) $(LDFLAGS_WINDOWS)  -L. -lmplot -o $(OUTPUT_WINDOWS) 
+
+lib: $(LIBOBJS) $(EXTRAOBJS)
+	dllwrap --export-all --output-def $(DEFFILE) --implib $(ANAME_WINDOWS) \
+	--driver-name gcc -o $(DLLNAME_WINDOWS) $(LIBOBJS) $(EXTRAOBJS) \
+	$(DLL_LDFLAGS_WINDOWS)
+
+clean:
+	rm -f $(OBJS) $(LIBOBJS) *~ $(ANAME_WINDOWS) $(DLLNAME_WINDOWS)\
+	 $(OUTPUT_WINDOWS) $(DEFFILE) 
+
+static: $(LIBOBJS) $(OBJS) $(EXTRAOBJS)
+	$(CC) $(OBJS) $(LIBOBJS) $(EXTRAOBJS) $(LDFLAGS_WINDOWS) -o $(OUTPUT_WINDOWS)

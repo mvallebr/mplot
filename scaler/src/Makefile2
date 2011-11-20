@@ -1,0 +1,19 @@
+
+
+
+all: uso_interno oficial
+
+uso_interno: clean
+	echo Habilitando programa de uso interno. Use make oficial para construir a versão oficial
+	echo "#define USO_INTERNO" > tipo.h
+	make
+	mv scaler scaler_interno
+
+oficial: clean
+	echo Habilitando programa oficial. Use make uso_interno para construir a versão de uso interno
+	echo > tipo.h
+	make
+	mv scaler scaler_oficial
+
+clean:
+	rm -f *.o *~

@@ -1,0 +1,18 @@
+      0 [main] MTEST 238661 fhandler_console::fixup_after_exec: error opening console after exec, errno 13, Win32 error 0
+m->tangent[0]=0.198912
+m->tangent[1]=0.668179
+m->tangent[2]=1.496606
+m->tangent[3]=5.027340
+m->tangent[4]=-5.027339
+m->tangent[5]=-1.496606
+m->tangent[6]=-0.668179
+m->tangent[7]=-0.198912
+---64
+---32
+---32
+---32
+---32
+---32
+---32
+---32
+---32

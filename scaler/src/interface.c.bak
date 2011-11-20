@@ -1,0 +1,616 @@
+/*
+ * NÃO EDITAR ESTE ARQUIVO - é gerado pelo Glade.
+ */
+
+#ifdef HAVE_CONFIG_H
+#  include <config.h>
+#endif
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string.h>
+
+#include <gnome.h>
+
+#include "callbacks.h"
+#include "interface.h"
+#include "support.h"
+
+static GnomeUIInfo arquivo1_menu_uiinfo[] =
+{
+  {
+    GNOME_APP_UI_ITEM, N_("_Gerar"),
+    NULL,
+    (gpointer) on_gerar1_activate, NULL, NULL,
+    GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_REDO,
+    0, (GdkModifierType) 0, NULL
+  },
+  GNOMEUIINFO_SEPARATOR,
+  {
+    GNOME_APP_UI_ITEM, N_("_Sair"),
+    NULL,
+    (gpointer) on_sair1_activate, NULL, NULL,
+    GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT,
+    0, (GdkModifierType) 0, NULL
+  },
+  GNOMEUIINFO_END
+};
+
+static GnomeUIInfo menubar1_uiinfo[] =
+{
+  {
+    GNOME_APP_UI_SUBTREE, N_("_Arquivo"),
+    NULL,
+    arquivo1_menu_uiinfo, NULL, NULL,
+    GNOME_APP_PIXMAP_NONE, NULL,
+    0, (GdkModifierType) 0, NULL
+  },
+  GNOMEUIINFO_END
+};
+
+GtkWidget*
+create_wndMain (void)
+{
+  GtkWidget *wndMain;
+  GtkWidget *vbox1;
+  GtkWidget *menubar1;
+  GtkWidget *notebook1;
+  GtkWidget *vbox_geom;
+  GtkWidget *label4;
+  GtkWidget *fileentry1;
+  GtkWidget *combo_entry1;
+  GtkWidget *label5;
+  GtkWidget *label1;
+  GtkWidget *vbox_options;
+  GtkWidget *btnExpr;
+  GtkWidget *btnExtraNode;
+  GtkWidget *btnApplyScale;
+  GtkWidget *label16;
+  GtkWidget *fileentry2;
+  GtkWidget *entry1;
+  GtkWidget *label15;
+  GtkWidget *vbox_output;
+  GtkWidget *label8;
+  GtkWidget *fileentry3;
+  GtkWidget *combo_entry5;
+  GtkWidget *label17;
+  GtkWidget *vbox3;
+  GtkWidget *hbox3;
+  GtkWidget *label9;
+  GtkWidget *numberentry3;
+  GtkWidget *edtCorrente;
+  GtkWidget *btnDiam;
+  GtkWidget *hbox6;
+  GtkWidget *label14;
+  GtkWidget *numberentry4;
+  GtkWidget *edtEspessura;
+  GtkWidget *hbox4;
+  GtkWidget *label10;
+  GtkWidget *vbox6;
+  GtkWidget *label11;
+  GtkWidget *label12;
+  GtkWidget *vbox7;
+  GtkWidget *numberentry5;
+  GtkWidget *edtCond1;
+  GtkWidget *numberentry6;
+  GtkWidget *edtCond2;
+  GtkWidget *hbox5;
+  GtkWidget *label13;
+  GtkWidget *numberentry7;
+  GtkWidget *edtSintonia;
+  GtkWidget *label2;
+  GtkWidget *vbox4;
+  GtkWidget *label7;
+  GtkWidget *hbox1;
+  GtkWidget *numberentry1;
+  GtkWidget *combo_entry3;
+  GtkWidget *numberentry2;
+  GtkWidget *combo_entry4;
+  GtkWidget *hbox2;
+  GtkWidget *button5;
+  GtkWidget *button3;
+  GtkWidget *label3;
+
+  wndMain = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_object_set_data (GTK_OBJECT (wndMain), "wndMain", wndMain);
+  gtk_window_set_title (GTK_WINDOW (wndMain), _("Geometry Scaler"));
+  gtk_window_set_position (GTK_WINDOW (wndMain), GTK_WIN_POS_CENTER);
+  gtk_window_set_default_size (GTK_WINDOW (wndMain), 640, -1);
+
+  vbox1 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox1", vbox1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox1);
+  gtk_container_add (GTK_CONTAINER (wndMain), vbox1);
+
+  menubar1 = gtk_menu_bar_new ();
+  gtk_widget_ref (menubar1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "menubar1", menubar1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (menubar1);
+  gtk_box_pack_start (GTK_BOX (vbox1), menubar1, FALSE, FALSE, 0);
+  gnome_app_fill_menu (GTK_MENU_SHELL (menubar1), menubar1_uiinfo,
+                       NULL, FALSE, 0);
+
+  gtk_widget_ref (menubar1_uiinfo[0].widget);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "arquivo1",
+                            menubar1_uiinfo[0].widget,
+                            (GtkDestroyNotify) gtk_widget_unref);
+
+  gtk_widget_ref (arquivo1_menu_uiinfo[0].widget);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "gerar1",
+                            arquivo1_menu_uiinfo[0].widget,
+                            (GtkDestroyNotify) gtk_widget_unref);
+
+  gtk_widget_ref (arquivo1_menu_uiinfo[1].widget);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "separador1",
+                            arquivo1_menu_uiinfo[1].widget,
+                            (GtkDestroyNotify) gtk_widget_unref);
+
+  gtk_widget_ref (arquivo1_menu_uiinfo[2].widget);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "sair1",
+                            arquivo1_menu_uiinfo[2].widget,
+                            (GtkDestroyNotify) gtk_widget_unref);
+
+  notebook1 = gtk_notebook_new ();
+  gtk_widget_ref (notebook1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "notebook1", notebook1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (notebook1);
+  gtk_box_pack_start (GTK_BOX (vbox1), notebook1, TRUE, TRUE, 0);
+
+  vbox_geom = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox_geom);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox_geom", vbox_geom,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox_geom);
+  gtk_container_add (GTK_CONTAINER (notebook1), vbox_geom);
+
+  label4 = gtk_label_new (_("Arquivo de geometria:"));
+  gtk_widget_ref (label4);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label4", label4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label4);
+  gtk_box_pack_start (GTK_BOX (vbox_geom), label4, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label4), GTK_JUSTIFY_LEFT);
+
+  fileentry1 = gnome_file_entry_new (NULL, NULL);
+  gtk_widget_ref (fileentry1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "fileentry1", fileentry1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (fileentry1);
+  gtk_box_pack_start (GTK_BOX (vbox_geom), fileentry1, TRUE, TRUE, 0);
+
+  combo_entry1 = gnome_file_entry_gtk_entry (GNOME_FILE_ENTRY (fileentry1));
+  gtk_widget_ref (combo_entry1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "combo_entry1", combo_entry1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (combo_entry1);
+  gtk_entry_set_text (GTK_ENTRY (combo_entry1), _("../data/teste2.txt"));
+
+  label5 = gtk_label_new (_("O arquivo de geometria é um arquivo texto exportado pelo ansys. Na versão 5.5 do ansys, basta ir ao menu pre-processor/archivemodel/write para abrir a janela de exportação. Deve-se selecionar apenas a geometria (GEOM) na lista que aparece nessa tela. Opcionalmente, pode-se usar o comando CDWRITE."));
+  gtk_widget_ref (label5);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label5", label5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label5);
+  gtk_box_pack_start (GTK_BOX (vbox_geom), label5, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label5), GTK_JUSTIFY_FILL);
+  gtk_label_set_line_wrap (GTK_LABEL (label5), TRUE);
+
+  label1 = gtk_label_new (_("Geometria (ansys)"));
+  gtk_widget_ref (label1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label1", label1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label1);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 0), label1);
+
+  vbox_options = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox_options);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox_options", vbox_options,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox_options);
+  gtk_container_add (GTK_CONTAINER (notebook1), vbox_options);
+
+  btnExpr = gtk_toggle_button_new_with_label (_("Adicionar dados experimentais?"));
+  gtk_widget_ref (btnExpr);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "btnExpr", btnExpr,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (btnExpr);
+  gtk_box_pack_start (GTK_BOX (vbox_options), btnExpr, FALSE, FALSE, 0);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (btnExpr), TRUE);
+
+  btnExtraNode = gtk_toggle_button_new_with_label (_("Nó extra?"));
+  gtk_widget_ref (btnExtraNode);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "btnExtraNode", btnExtraNode,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (btnExtraNode);
+  gtk_box_pack_start (GTK_BOX (vbox_options), btnExtraNode, FALSE, FALSE, 0);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (btnExtraNode), TRUE);
+
+  btnApplyScale = gtk_toggle_button_new_with_label (_("Aplicar escala?"));
+  gtk_widget_ref (btnApplyScale);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "btnApplyScale", btnApplyScale,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (btnApplyScale);
+  gtk_box_pack_start (GTK_BOX (vbox_options), btnApplyScale, FALSE, FALSE, 0);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (btnApplyScale), TRUE);
+
+  label16 = gtk_label_new (_("Arquivo com os dados experimentais:"));
+  gtk_widget_ref (label16);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label16", label16,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label16);
+  gtk_box_pack_start (GTK_BOX (vbox_options), label16, TRUE, TRUE, 0);
+
+  fileentry2 = gnome_file_entry_new (NULL, NULL);
+  gtk_widget_ref (fileentry2);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "fileentry2", fileentry2,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (fileentry2);
+  gtk_box_pack_start (GTK_BOX (vbox_options), fileentry2, TRUE, TRUE, 0);
+
+  entry1 = gnome_file_entry_gtk_entry (GNOME_FILE_ENTRY (fileentry2));
+  gtk_widget_ref (entry1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "entry1", entry1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (entry1);
+  gtk_entry_set_text (GTK_ENTRY (entry1), _("../data/dadosdiametral1copo.dat"));
+
+  label15 = gtk_label_new (_("Opções"));
+  gtk_widget_ref (label15);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label15", label15,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label15);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 1), label15);
+
+  vbox_output = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox_output);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox_output", vbox_output,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox_output);
+  gtk_container_add (GTK_CONTAINER (notebook1), vbox_output);
+
+  label8 = gtk_label_new (_("Arquivo a ser salvo:"));
+  gtk_widget_ref (label8);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label8", label8,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label8);
+  gtk_box_pack_start (GTK_BOX (vbox_output), label8, TRUE, TRUE, 0);
+
+  fileentry3 = gnome_file_entry_new (NULL, NULL);
+  gtk_widget_ref (fileentry3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "fileentry3", fileentry3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (fileentry3);
+  gtk_box_pack_start (GTK_BOX (vbox_output), fileentry3, TRUE, TRUE, 0);
+
+  combo_entry5 = gnome_file_entry_gtk_entry (GNOME_FILE_ENTRY (fileentry3));
+  gtk_widget_ref (combo_entry5);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "combo_entry5", combo_entry5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (combo_entry5);
+  gtk_entry_set_text (GTK_ENTRY (combo_entry5), _("../data/teste_out.hm"));
+
+  label17 = gtk_label_new (_("Saída"));
+  gtk_widget_ref (label17);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label17", label17,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label17);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 2), label17);
+
+  vbox3 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox3", vbox3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox3);
+  gtk_container_add (GTK_CONTAINER (notebook1), vbox3);
+
+  hbox3 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox3", hbox3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox3);
+  gtk_box_pack_start (GTK_BOX (vbox3), hbox3, FALSE, FALSE, 0);
+
+  label9 = gtk_label_new (_("Corrente (mA):"));
+  gtk_widget_ref (label9);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label9", label9,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label9);
+  gtk_box_pack_start (GTK_BOX (hbox3), label9, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label9), GTK_JUSTIFY_RIGHT);
+
+  numberentry3 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry3", numberentry3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry3);
+  gtk_box_pack_start (GTK_BOX (hbox3), numberentry3, TRUE, TRUE, 0);
+
+  edtCorrente = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry3));
+  gtk_widget_ref (edtCorrente);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "edtCorrente", edtCorrente,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (edtCorrente);
+  gtk_entry_set_text (GTK_ENTRY (edtCorrente), _("1"));
+
+  btnDiam = gtk_toggle_button_new_with_label (_("Diametral?"));
+  gtk_widget_ref (btnDiam);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "btnDiam", btnDiam,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (btnDiam);
+  gtk_box_pack_start (GTK_BOX (hbox3), btnDiam, TRUE, TRUE, 0);
+
+  hbox6 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox6);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox6", hbox6,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox6);
+  gtk_box_pack_start (GTK_BOX (vbox3), hbox6, TRUE, TRUE, 0);
+
+  label14 = gtk_label_new (_("Espessura (mm):"));
+  gtk_widget_ref (label14);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label14", label14,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label14);
+  gtk_box_pack_start (GTK_BOX (hbox6), label14, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label14), GTK_JUSTIFY_RIGHT);
+
+  numberentry4 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry4);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry4", numberentry4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry4);
+  gtk_box_pack_start (GTK_BOX (hbox6), numberentry4, TRUE, TRUE, 0);
+
+  edtEspessura = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry4));
+  gtk_widget_ref (edtEspessura);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "edtEspessura", edtEspessura,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (edtEspessura);
+  gtk_entry_set_text (GTK_ENTRY (edtEspessura), _("35"));
+
+  hbox4 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox4);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox4", hbox4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox4);
+  gtk_box_pack_start (GTK_BOX (vbox3), hbox4, TRUE, TRUE, 0);
+
+  label10 = gtk_label_new (_("Condutividade:"));
+  gtk_widget_ref (label10);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label10", label10,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label10);
+  gtk_box_pack_start (GTK_BOX (hbox4), label10, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label10), GTK_JUSTIFY_RIGHT);
+
+  vbox6 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox6);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox6", vbox6,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox6);
+  gtk_box_pack_start (GTK_BOX (hbox4), vbox6, TRUE, TRUE, 0);
+
+  label11 = gtk_label_new (_("Material 1:"));
+  gtk_widget_ref (label11);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label11", label11,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label11);
+  gtk_box_pack_start (GTK_BOX (vbox6), label11, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label11), GTK_JUSTIFY_RIGHT);
+
+  label12 = gtk_label_new (_("Material 2:"));
+  gtk_widget_ref (label12);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label12", label12,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label12);
+  gtk_box_pack_start (GTK_BOX (vbox6), label12, TRUE, TRUE, 0);
+  gtk_label_set_justify (GTK_LABEL (label12), GTK_JUSTIFY_RIGHT);
+
+  vbox7 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox7);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox7", vbox7,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox7);
+  gtk_box_pack_start (GTK_BOX (hbox4), vbox7, TRUE, TRUE, 0);
+
+  numberentry5 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry5);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry5", numberentry5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry5);
+  gtk_box_pack_start (GTK_BOX (vbox7), numberentry5, TRUE, TRUE, 0);
+
+  edtCond1 = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry5));
+  gtk_widget_ref (edtCond1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "edtCond1", edtCond1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (edtCond1);
+  gtk_entry_set_text (GTK_ENTRY (edtCond1), _("0.005"));
+
+  numberentry6 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry6);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry6", numberentry6,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry6);
+  gtk_box_pack_start (GTK_BOX (vbox7), numberentry6, TRUE, TRUE, 0);
+
+  edtCond2 = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry6));
+  gtk_widget_ref (edtCond2);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "edtCond2", edtCond2,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (edtCond2);
+  gtk_entry_set_text (GTK_ENTRY (edtCond2), _("0.00001"));
+
+  hbox5 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox5);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox5", hbox5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox5);
+  gtk_box_pack_start (GTK_BOX (vbox3), hbox5, TRUE, TRUE, 0);
+
+  label13 = gtk_label_new (_("Sintonia:"));
+  gtk_widget_ref (label13);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label13", label13,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label13);
+  gtk_box_pack_start (GTK_BOX (hbox5), label13, TRUE, TRUE, 0);
+
+  numberentry7 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry7);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry7", numberentry7,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry7);
+  gtk_box_pack_start (GTK_BOX (hbox5), numberentry7, TRUE, TRUE, 0);
+
+  edtSintonia = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry7));
+  gtk_widget_ref (edtSintonia);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "edtSintonia", edtSintonia,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (edtSintonia);
+  gtk_entry_set_text (GTK_ENTRY (edtSintonia), _("320"));
+
+  label2 = gtk_label_new (_("Carga"));
+  gtk_widget_ref (label2);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label2", label2,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label2);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 3), label2);
+
+  vbox4 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox4);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "vbox4", vbox4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox4);
+  gtk_container_add (GTK_CONTAINER (notebook1), vbox4);
+
+  label7 = gtk_label_new (_("Tamanho em x e y (m):"));
+  gtk_widget_ref (label7);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label7", label7,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label7);
+  gtk_box_pack_start (GTK_BOX (vbox4), label7, TRUE, TRUE, 0);
+
+  hbox1 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox1", hbox1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox1);
+  gtk_box_pack_start (GTK_BOX (vbox4), hbox1, TRUE, TRUE, 0);
+
+  numberentry1 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry1);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry1", numberentry1,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry1);
+  gtk_box_pack_start (GTK_BOX (hbox1), numberentry1, TRUE, TRUE, 0);
+
+  combo_entry3 = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry1));
+  gtk_widget_ref (combo_entry3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "combo_entry3", combo_entry3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (combo_entry3);
+  gtk_entry_set_text (GTK_ENTRY (combo_entry3), _("1"));
+
+  numberentry2 = gnome_number_entry_new (NULL, NULL);
+  gtk_widget_ref (numberentry2);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "numberentry2", numberentry2,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (numberentry2);
+  gtk_box_pack_start (GTK_BOX (hbox1), numberentry2, TRUE, TRUE, 0);
+
+  combo_entry4 = gnome_number_entry_gtk_entry (GNOME_NUMBER_ENTRY (numberentry2));
+  gtk_widget_ref (combo_entry4);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "combo_entry4", combo_entry4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (combo_entry4);
+  gtk_entry_set_text (GTK_ENTRY (combo_entry4), _("1"));
+
+  hbox2 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_ref (hbox2);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "hbox2", hbox2,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (hbox2);
+  gtk_box_pack_start (GTK_BOX (vbox4), hbox2, TRUE, TRUE, 0);
+
+  button5 = gtk_button_new_with_label (_("Teste"));
+  gtk_widget_ref (button5);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "button5", button5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (button5);
+  gtk_box_pack_start (GTK_BOX (hbox2), button5, TRUE, TRUE, 0);
+
+  button3 = gnome_stock_button (GNOME_STOCK_BUTTON_APPLY);
+  gtk_widget_ref (button3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "button3", button3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (button3);
+  gtk_box_pack_start (GTK_BOX (hbox2), button3, TRUE, TRUE, 0);
+
+  label3 = gtk_label_new (_("Tamanho"));
+  gtk_widget_ref (label3);
+  gtk_object_set_data_full (GTK_OBJECT (wndMain), "label3", label3,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (label3);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 4), label3);
+
+  gtk_signal_connect (GTK_OBJECT (wndMain), "delete_event",
+                      GTK_SIGNAL_FUNC (on_wndMain_delete_event),
+                      NULL);
+  gtk_signal_connect (GTK_OBJECT (btnDiam), "toggled",
+                      GTK_SIGNAL_FUNC (on_btnDiam_toggled),
+                      NULL);
+  gtk_signal_connect (GTK_OBJECT (button3), "clicked",
+                      GTK_SIGNAL_FUNC (on_button3_clicked),
+                      NULL);
+
+  return wndMain;
+}
+
+GtkWidget*
+create_wndError (void)
+{
+  GtkWidget *wndError;
+  GtkWidget *vbox5;
+  GtkWidget *lbError;
+  GtkWidget *button4;
+
+  wndError = gtk_window_new (GTK_WINDOW_DIALOG);
+  gtk_object_set_data (GTK_OBJECT (wndError), "wndError", wndError);
+  gtk_container_set_border_width (GTK_CONTAINER (wndError), 2);
+  gtk_window_set_title (GTK_WINDOW (wndError), _("Erro"));
+  gtk_window_set_position (GTK_WINDOW (wndError), GTK_WIN_POS_CENTER);
+  gtk_window_set_modal (GTK_WINDOW (wndError), TRUE);
+  gtk_window_set_default_size (GTK_WINDOW (wndError), 300, 100);
+
+  vbox5 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_ref (vbox5);
+  gtk_object_set_data_full (GTK_OBJECT (wndError), "vbox5", vbox5,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (vbox5);
+  gtk_container_add (GTK_CONTAINER (wndError), vbox5);
+
+  lbError = gtk_label_new (_("Nome de arquivo inválido!"));
+  gtk_widget_ref (lbError);
+  gtk_object_set_data_full (GTK_OBJECT (wndError), "lbError", lbError,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (lbError);
+  gtk_box_pack_start (GTK_BOX (vbox5), lbError, TRUE, TRUE, 0);
+
+  button4 = gtk_button_new_with_label (_("Ok"));
+  gtk_widget_ref (button4);
+  gtk_object_set_data_full (GTK_OBJECT (wndError), "button4", button4,
+                            (GtkDestroyNotify) gtk_widget_unref);
+  gtk_widget_show (button4);
+  gtk_box_pack_start (GTK_BOX (vbox5), button4, FALSE, FALSE, 0);
+
+  gtk_signal_connect (GTK_OBJECT (button4), "clicked",
+                      GTK_SIGNAL_FUNC (on_button4_clicked),
+                      NULL);
+
+  return wndError;
+}
+

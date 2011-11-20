@@ -1,0 +1,6 @@
+/*
+ * NÃO EDITAR ESTE ARQUIVO - é gerado pelo Glade.
+ */
+
+GtkWidget* create_wndMain (void);
+GtkWidget* create_wndError (void);

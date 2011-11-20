@@ -1,0 +1,1 @@
+This project reads 3d data and plots 2d countour curve graphics, using several algorithms.I wrote a library and some applications.I think reuse could exist for these things, so I am publishing them as open source now.

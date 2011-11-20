@@ -1,0 +1,29 @@
+open data.dat
+read columns x y z
+close
+
+set x size 30
+set x axis 0 1 0.1
+set y size 30
+set y axis 0 1 0.1
+draw axes
+set line width symbol 0.2
+set symbol size 0.2
+draw symbol bullet
+set font size 8
+draw values
+#set x grid -0.15 0.15 0.01
+#set y grid -0.15 0.15 0.01
+
+# Use default method (Barnes)
+convert columns to grid barnes
+
+set font size 10
+draw contour 0.0045 0.0051 0.0001
+set font size 12
+draw title "Example 5 -- wind (Fig5 Koch et al, 1983)"
+
+#set dgrid3d 80,80,4
+#set cntrparam levels 20 
+#set xrang [-.15:.15]
+#set yrang [-0.15:.15]
